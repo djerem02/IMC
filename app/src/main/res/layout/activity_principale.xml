@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView android:text="Poids"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#FF0000"
+             />
+
+    <EditText
+            android:id="@+id/poids"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Poids(kg)"
+            android:layout_alignParentRight="true" />
+
+
+
+    <TextView android:text="Taille"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#FF0000"
+            android:layout_below="@id/poids"
+            />
+
+    <EditText
+            android:id="@+id/taille"
+            android:hint="Taille(cm)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:layout_below="@+id/poids"
+            android:layout_alignParentRight="true"
+     />
+
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/radio1"
+        android:orientation="horizontal"
+        android:layout_below="@id/taille"
+        >
+
+
+        <RadioButton
+        android:id="@+id/radio1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="F" />
+
+        <RadioButton
+        android:id="@+id/radio2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="M"
+        />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/fonction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fonction"
+        android:layout_below="@id/group"
+        android:checked="false" />
+
+
+    <Button
+        android:id="@+id/calcul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculer"
+        android:layout_below="@+id/fonction"
+        android:layout_marginLeft="25dip"
+
+        />
+
+        <Button
+            android:id="@+id/raz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RAZ"
+            android:layout_below="@+id/fonction"
+            android:layout_alignRight="@id/taille"
+            android:layout_marginRight="25dip" />
+
+
+
+    <TextView
+        android:id="@+id/resultPre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Résultat:"
+        android:layout_below="@id/calcul"
+
+         />
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Cliquez sur 'Calculer' pour obtenir votre IMC."
+        android:layout_below="@id/resultPre"
+        />
+</RelativeLayout>
